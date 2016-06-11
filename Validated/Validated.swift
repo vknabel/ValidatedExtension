@@ -34,10 +34,36 @@ public struct ValidatorError: ErrorType, CustomStringConvertible {
     }
 }
 
+/// Allows behaviour to be added to a validated type via protocol extensions.
+///
+/// e.g.,
+/// ~~~
+/// typealias PhoneNumber = Validated<String, PhoneNumberValidator>
+///
+/// extension ValidatedType where WrapperType == String, ValidatorType == PhoneNumberValidator {
+///   var regionCode: String {
+///     return // Parse and return region code
+///   }
+/// }
+///
+/// ...
+///
+/// let phoneNumber = try PhoneNumber("00 1 917 555 2368")
+/// print("\(phoneNumber.regionCode)")
+/// ~~~
+public protocol ValidatedType {
+    associatedtype WrapperType
+    associatedtype ValidatorType
+
+    var value: WrapperType { get }
+}
+
 /// Wraps a type together with one validator. Provides a failable initializer
 /// that will only return a value of `Validated` if the provided `WrapperType` value
 /// fulfills the requirements of the specified `Validator`.
-public struct Validated<WrapperType, V: Validator where V.WrappedType == WrapperType> {
+public struct Validated<WrapperType, V: Validator where V.WrappedType == WrapperType>: ValidatedType {
+    public typealias ValidatorType = V
+
     /// The value that passes the defined `Validator`.
     ///
     /// If you are able to access this property; it means the wrappedType passes the validator.
