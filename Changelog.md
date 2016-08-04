@@ -1,3 +1,25 @@
+#3.0
+*Released: 04/08/2016*
+
+**Breaking API Changes:**
+
+- Renamed Validated to ValidatedExtension in order to be distributed as CocoaPod - @vknabel
+- Removed first generic Parameter on `Validated` - @vknabel
+- `Validator.validate` now additionally throws - @vknabel
+
+**API Additions:**
+
+- Added `ValidatedType` protocol - @jersonperpetua
+
+**Other Changes:**
+
+- Added support for Swift Package Manager - @vknabel
+- Additionally supports Swift 3.0 - @vknabel
+- Included Jazzy-parsed Docs - @vknabel
+- Generated Github Pages - @vknabel
+- Restructured Repository - @vknabel
+- Added Swiftlint - @vknabel
+
 #2.0.1
 *Released: 05/05/2016*
 

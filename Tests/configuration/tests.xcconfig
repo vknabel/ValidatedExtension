@@ -1,3 +1,0 @@
-// Packaging
-PRODUCT_NAME = $(PRODUCT_NAME)Tests
-INFOPLIST_FILE = $(SRCROOT)/Tests/configuration/tests.plist

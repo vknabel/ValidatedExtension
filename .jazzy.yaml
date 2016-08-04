@@ -1,0 +1,11 @@
+clean: true
+author: Valentin Knabel
+author_url: https://twitter.com/vknabel
+github_url: https://github.com/vknabel/ValidatedExtension
+module: ValidatedExtension
+module_version: 3.0
+root_url: https://vknabel.github.io/ValidatedExtension/
+exclude: Tests/
+readme: README.md
+output: docs/
+theme: fullwidth

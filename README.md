@@ -1,17 +1,17 @@
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Validated.svg?style=flat-square)](https://cocoapods.org/pods/Validated) [![Platform support](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square)](https://github.com/Ben-G/Validated/blob/master/LICENSE.md)[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/Ben-G/Validated/blob/master/LICENSE.md)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ValidatedExtension.svg?style=flat-square)](https://cocoapods.org/pods/ExtensionValidated) [![Platform support](https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square)](https://github.com/vknabel/ValidatedExtension/blob/master/LICENSE.md)[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/vknabel/ValidatedExtension/blob/master/LICENSE.md)
 
 
-#Validated
+#ValidatedExtension
 
-Validated is a μ-library (~50 Source Lines of Code) that allows you make better use of Swift's type system by providing tools for easily generating new types with built-in guarantees.
-
+ValidatedExtension is a μ-library that allows you make better use of Swift's type system by providing tools for easily generating new types with built-in guarantees. It is a fork of [Ben-G/Validated](https://github.com/Ben-G/Validated)'s fork [jersonperpetua/Validated](https://github.com/jersonperpetua/Validated) (which adds `ValidatedType`). ValidatedExtension removes `Validated`'s unnecessary first generic parameter, enables Validators to fail by throwing Errors and adds support for Swift Package Manager and Swift 3.0.
+ 
 Validated allows you to use the type system to verify properties of your values, providing a new level of compile time guarantees.
 
 Using validators you can define new types that add guarantees to existing types:
 
 ```swift
 // Create a new string type that can never be empty
-typealias NonEmptyString = Validated<String, NonEmptyStringValidator>
+typealias NonEmptyString = Validated<NonEmptyStringValidator>
 ```
 
 ##Example
@@ -45,7 +45,7 @@ First, you need to implement a validator:
 ```swift
 struct LoggedInValidator: Validator {
 
-    static func validate(value: User) -> Bool {
+    static func validate(value: User) throws -> Bool {
         return value.loggedIn
     }
 
@@ -56,7 +56,7 @@ A `Validator` needs to implement the `validate` function that takes the type tha
 With the `Validator` in place we can create our new type like this:
 
 ```swift
-typealias LoggedInUser = Validated<User, LoggedInValidator>
+typealias LoggedInUser = Validated<LoggedInValidator>
 ```
 
 Note, that it is not required to provide a typealias, but for most cases it is recommended.
@@ -77,7 +77,7 @@ Validated offers `Validator` types for logical operations that allow you to requ
 
 ```swift
 typealias AllCapsNonEmptyString =
-            Validated<String, And<NonEmptyStringValidator, AllCapsLatinStringValidator>>
+            Validated<And<NonEmptyStringValidator, AllCapsLatinStringValidator>>
 ```
 `Or` and `Not` are provided as additional validators. You can take a look at the specs for additional examples.
 
@@ -99,7 +99,7 @@ struct NonEmptyCollectionValidator<T: CollectionType>: Validator {
 However, when using this validator to create a type, you will have to specify the exact type of collection you want to validate:
 
 ```swift
-typealias NonEmptyListOfStrings = Validated<[String], NonEmptyCollectionValidator<[String]>>
+typealias NonEmptyListOfStrings = Validated<NonEmptyCollectionValidator<[String]>>
 ```
 
 # Does this Library Enable Dependent Types?
@@ -133,17 +133,17 @@ You can install Validated via CocoaPods by adding it to your `Podfile`:
 	source 'https://github.com/CocoaPods/Specs.git'
 	platform :ios, '8.0'
 
-	pod 'Validated'
+	pod 'ValidatedExtension'
 
 And run `pod install`.
 
 ## Carthage
 
-You can install Validated via Carthage by adding the following line to your Cartfile:
+You can install ValidatedExtension via Carthage by adding the following line to your Cartfile:
 
-    github "Ben-G/Validated"
+    github "vknabel/ValidatedExtension"
 
 
 # Get in touch
 
-If you have any questions, you can find me on twitter [@benjaminencz](https://twitter.com/benjaminencz).
+If you have any questions, you can find me on twitter [@valentinknabel](https://twitter.com/valentinknabel).
