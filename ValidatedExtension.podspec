@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://vknabel.github.io/ValidatedExtension"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
   s.author           = { "Valentin Knabel" => "develop@vknabel.com" }
-  s.social_media_url = "http://twitter.com/valentinknabel"
+  s.social_media_url = "https://twitter.com/vknabel"
   s.source           = { :git => "https://github.com/vknabel/ValidatedExtension.git", :tag => s.version.to_s }
   s.ios.deployment_target     = '8.0'
   s.osx.deployment_target     = '10.10'
