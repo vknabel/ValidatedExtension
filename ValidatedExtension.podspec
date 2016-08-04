@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                         Validated is a μ-library (~50 Source Lines of Code) that allows you make better use of Swift's type system
                         by providing tools for easily generating new types with built-in guarantees.
                         DESC
-  s.homepage         = "https://github.com/vknabel/ValidatedExtension"
+  s.homepage         = "https://vknabel.github.io/ValidatedExtension"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
   s.author           = { "Valentin Knabel" => "develop@vknabel.com" }
   s.social_media_url = "http://twitter.com/valentinknabel"
