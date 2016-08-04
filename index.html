@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ValidatedExtension  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+
+    <a title="ValidatedExtension  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          ValidatedExtension Docs
+        </a>
+         (100% documented)
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vknabel/ValidatedExtension">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fvknabel%2Egithub%2Eio%2FValidatedExtension%2Fdocsets%2FValidatedExtension%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">ValidatedExtension Reference</a>
+      <img class="carat" src="img/carat.png" />
+      ValidatedExtension  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ValidatedType.html">ValidatedType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Validator.html">Validator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/And.html">And</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Not.html">Not</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Or.html">Or</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Validated.html">Validated</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ValidatorError.html">ValidatorError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <p><a href="https://cocoapods.org/pods/ExtensionValidated"><img src="https://img.shields.io/cocoapods/v/ValidatedExtension.svg?style=flat-square" alt="CocoaPods Compatible"></a> <a href="https://github.com/vknabel/ValidatedExtension/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square" alt="Platform support"></a><a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square" alt="Carthage compatible"></a> <a href="https://github.com/vknabel/ValidatedExtension/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT"></a></p>
+<a href='#validatedextension' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='validatedextension'>ValidatedExtension</h1>
+
+<p>ValidatedExtension is a μ-library that allows you make better use of Swift&rsquo;s type system by providing tools for easily generating new types with built-in guarantees. It is a fork of <a href="https://github.com/Ben-G/Validated">Ben-G/Validated</a>&rsquo;s fork <a href="https://github.com/jersonperpetua/Validated">jersonperpetua/Validated</a> (which adds <code>ValidatedType</code>). ValidatedExtension removes <code>Validated</code>&rsquo;s unnecessary first generic parameter, enables Validators to fail by throwing Errors and adds support for Swift Package Manager and Swift 3.0.</p>
+
+<p>Validated allows you to use the type system to verify properties of your values, providing a new level of compile time guarantees.</p>
+
+<p>Using validators you can define new types that add guarantees to existing types:</p>
+<pre class="highlight swift"><code><span class="c1">// Create a new string type that can never be empty</span>
+<span class="kd">typealias</span> <span class="kt">NonEmptyString</span> <span class="o">=</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">NonEmptyStringValidator</span><span class="o">&gt;</span>
+</code></pre>
+<a href='#example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example'>Example</h2>
+
+<p>You might have a function in your code that only knows how to work with a <code>User</code> value when the user is logged in. Usually you will implement this requirement in code &amp; add documentation, but you don&rsquo;t have an easy way of expressing this invariant in the type signature:</p>
+<pre class="highlight swift"><code><span class="c1">/// Please ever only call with a logged-in user!</span>
+<span class="kd">func</span> <span class="nf">performTaskWithUser</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">precondition</span><span class="p">(</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">loggedIn</span><span class="p">,</span> 
+        <span class="s">"It is illegal to call this method with a logged out user!"</span>
+    <span class="p">)</span>
+
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Using Validated you can quickly create a new type that describes this requirement in the type system. That makes it impossible to call the function with a logged-out user and it makes the method signature express your invariant (instead of relying on documentation):</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">performTaskWithUser</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">LoggedInUser</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>So how is this new <code>LoggedInUser</code> type created?</strong></p>
+
+<p>First, you need to implement a validator:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">LoggedInValidator</span><span class="p">:</span> <span class="kt">Validator</span> <span class="p">{</span>
+
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">loggedIn</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<p>A <code>Validator</code> needs to implement the <code>validate</code> function that takes the type that this validator can validate (in this case a <code>User</code>). The funtion returns a <code>Bool</code>. Return <code>true</code> if the requirements are fulfilled and <code>false</code> if not.</p>
+
+<p>With the <code>Validator</code> in place we can create our new type like this:</p>
+<pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">LoggedInUser</span> <span class="o">=</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">LoggedInValidator</span><span class="o">&gt;</span>
+</code></pre>
+
+<p>Note, that it is not required to provide a typealias, but for most cases it is recommended.</p>
+
+<p><strong>And that&rsquo;s it!</strong></p>
+
+<p><code>LoggedInUser</code> now has a failable initializer that takes a <code>User</code>. If the passed in <code>User</code> fulfills the logged-in requirement you will have a <code>LoggedInUser</code>, otherwise <code>nil</code>. Additionally <code>LoggedInUser</code> provides a throwing initializer, in case you prefer to handle failed validations as errors instead of <code>nil</code> values.</p>
+
+<p>The underlying value (the full <code>User</code> value) is stored in the <code>.value</code> property of <code>LoggedInUser</code>.</p>
+<a href='#beyond-the-basics' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='beyond-the-basics'>Beyond the Basics</h2>
+
+<p>Validated provides some further features that might be non-obvious.</p>
+<a href='#composing-validators-with-logical-operators' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='composing-validators-with-logical-operators'>Composing Validators with Logical Operators</h3>
+
+<p>Validated offers <code>Validator</code> types for logical operations that allow you to require multiple validations in different combinations. E.g. you can use the <code>And</code> validator to require that two requirements must be met for your type to intializer:</p>
+<pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">AllCapsNonEmptyString</span> <span class="o">=</span>
+            <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">And</span><span class="o">&lt;</span><span class="kt">NonEmptyStringValidator</span><span class="p">,</span> <span class="kt">AllCapsLatinStringValidator</span><span class="o">&gt;&gt;</span>
+</code></pre>
+
+<p><code>Or</code> and <code>Not</code> are provided as additional validators. You can take a look at the specs for additional examples.</p>
+<a href='#generic-validators' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='generic-validators'>Generic Validators</h3>
+
+<p>A <code>Validator</code> can itself be generic. This is useful if you want to provide verifications for a whole category of types. The example validator <code>NonEmptyCollectionValidator</code> can be applied to all validator types by using a generic requirement:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">NonEmptyCollectionValidator</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">CollectionType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Validator</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="o">!</span><span class="n">value</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>However, when using this validator to create a type, you will have to specify the exact type of collection you want to validate:</p>
+<pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">NonEmptyListOfStrings</span> <span class="o">=</span> <span class="kt">Validated</span><span class="o">&lt;</span><span class="kt">NonEmptyCollectionValidator</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">]</span><span class="o">&gt;&gt;</span>
+</code></pre>
+<a href='#does-this-library-enable-dependent-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='does-this-library-enable-dependent-types'>Does this Library Enable Dependent Types?</h1>
+
+<p>No, not really. Dependent types would allow us to define types, solely based on values. This library only allows us to validate if a type is of a specified type <code>&lt;T&gt;</code> based on its value and a validator. The value itself doesn&rsquo;t change the type information. </p>
+
+<p>Truely dependent types would create the following results:
+<code>swift
+[1, 2, 3] // type = Array&lt;count:3 type:Int&gt;
+[1, 2, 3, 4] // type = Array&lt;count:4 type:Int&gt;
+</code></p>
+
+<p>Using Validated we can only verify if a type falls into one of our statically defined categories:
+<code>swift
+ListOf3([1,2,3]) // type = ListOf3&lt;Array&lt;Int&gt;
+ListOf3([1,2,3,4]) // type = nil
+</code></p>
+
+<p>However, these statically provided checks can still add a lot of value to your code; see the examples above.</p>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='installation'>Installation</h1>
+
+<p>Validated is available via the usual suspects.</p>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='cocoapods'>CocoaPods</h2>
+
+<p>You can install Validated via CocoaPods by adding it to your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+pod 'ValidatedExtension'
+</code></pre>
+
+<p>And run <code>pod install</code>.</p>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='carthage'>Carthage</h2>
+
+<p>You can install ValidatedExtension via Carthage by adding the following line to your Cartfile:</p>
+<pre class="highlight plaintext"><code>github "vknabel/ValidatedExtension"
+</code></pre>
+<a href='#get-in-touch' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='get-in-touch'>Get in touch</h1>
+
+<p>If you have any questions, you can find me on twitter <a href="https://twitter.com/valentinknabel">@valentinknabel</a>.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2016 <a class="link" href="https://twitter.com/vknabel" target="_blank" rel="external">Valentin Knabel</a>. All rights reserved. (Last updated: 2016-08-04)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
