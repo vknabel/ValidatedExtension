@@ -1,3 +1,10 @@
+# 3.0.1
+*Released: 16/08/2016*
+
+**Other Changes:**
+
+- Migrated to Swift 3.0 Beta 6 - @vknabel
+
 #3.0
 *Released: 04/08/2016*
 

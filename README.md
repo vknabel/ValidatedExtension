@@ -146,4 +146,4 @@ You can install ValidatedExtension via Carthage by adding the following line to 
 
 # Get in touch
 
-If you have any questions, you can find me on twitter [@valentinknabel](https://twitter.com/valentinknabel).
+If you have any questions, you can find me on twitter [@vknabel](https://twitter.com/vknabel).
