@@ -7,6 +7,7 @@
 ## Build generated
 build/
 DerivedData
+docs/**/*.tgz
 
 ## Various settings
 *.pbxuser

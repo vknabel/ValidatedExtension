@@ -4,6 +4,8 @@
 **Breaking Changes:**
 
 - Dropped Swift 2.x support - @vknabel
+- Added Travis support - @vknabel
+- Added missing `Tests` suffix for `Tests/ValidatedExtension` - @vknabel
 
 # 3.0.1
 *Released: 16/08/2016*
@@ -47,7 +49,7 @@
 
 - Removed `Validated2` and `Validated3` in favor of introduced logical wrapper validators - @Ben-G on suggestion of @tomquist
 - Failable initializer of `Validated` now requires explicit `value` argument due to introduction of throwing initializer - @Ben-G
-  
+
 **API Additions:**
 
 - Added wrapper validators for logical operators - @tomquist

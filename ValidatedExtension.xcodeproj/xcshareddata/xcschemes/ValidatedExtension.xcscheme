@@ -26,16 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_ValidatedExtensionTestSuite"
-               BuildableName = "ValidatedExtensionTestSuite.xctest"
-               BlueprintName = "ValidatedExtensionTestSuite"
+               BlueprintIdentifier = "______Target_ValidatedExtensionTests"
+               BuildableName = "ValidatedExtensionTests.xctest"
+               BlueprintName = "ValidatedExtensionTests"
                ReferencedContainer = "container:ValidatedExtension.xcodeproj">
             </BuildableReference>
          </TestableReference>

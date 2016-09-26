@@ -1,336 +1,254 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		_LinkFileRef_ValidatedExtension_via_ValidatedExtensionTestSuite /* ValidatedExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_ValidatedExtension" /* ValidatedExtension.framework */; };
-		__src_cc_ref_Sources/ValidatedExtension/ValidatedExtension.swift /* ValidatedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift /* ValidatedExtension.swift */; };
-		__src_cc_ref_Tests/ValidatedExtension/CustomTypeExample.swift /* CustomTypeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/ValidatedExtension/CustomTypeExample.swift /* CustomTypeExample.swift */; };
-		__src_cc_ref_Tests/ValidatedExtension/ExampleValidators.swift /* ExampleValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/ValidatedExtension/ExampleValidators.swift /* ExampleValidators.swift */; };
-		__src_cc_ref_Tests/ValidatedExtension/ValidatedTests.swift /* ValidatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/ValidatedExtension/ValidatedTests.swift /* ValidatedTests.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BAA2283B1D539DFA0034B8DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = __RootObject_ /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "______Target_ValidatedExtension";
-			remoteInfo = ValidatedExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift /* ValidatedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedExtension.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Tests/ValidatedExtension/CustomTypeExample.swift /* CustomTypeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypeExample.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Tests/ValidatedExtension/ExampleValidators.swift /* ExampleValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleValidators.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Tests/ValidatedExtension/ValidatedTests.swift /* ValidatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTests.swift; sourceTree = "<group>"; };
-		__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig /* ValidatedExtension.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ValidatedExtension.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		__PBXFileRef_ValidatedExtensionTestSuite_Info.plist /* ValidatedExtension.xcodeproj/ValidatedExtensionTestSuite_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ValidatedExtension.xcodeproj/ValidatedExtensionTestSuite_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_ValidatedExtension_Info.plist /* ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_build /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
-		__PBXFileRef_docs /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
-		"_____Product_ValidatedExtension" /* ValidatedExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ValidatedExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_ValidatedExtensionTestSuite" /* RelativePath(_impl: Basic.(PathImpl in _F37600050464D58680C1E5753557C388)(string: "ValidatedExtensionTestSuite.xctest")) */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RelativePath(_impl: Basic.(PathImpl in _F37600050464D58680C1E5753557C388)(string: \"ValidatedExtensionTestSuite.xctest\"))"; path = ValidatedExtensionTestSuite.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		"___LinkPhase_ValidatedExtension" /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		"___LinkPhase_ValidatedExtensionTestSuite" /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				_LinkFileRef_ValidatedExtension_via_ValidatedExtensionTestSuite /* ValidatedExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		TestProducts_ /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				"_____Product_ValidatedExtensionTestSuite" /* RelativePath(_impl: Basic.(PathImpl in _F37600050464D58680C1E5753557C388)(string: "ValidatedExtensionTestSuite.xctest")) */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		"___RootGroup_" = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Package.swift /* Package.swift */,
-				"_____Configs_" /* Configs */,
-				"_____Sources_" /* Sources */,
-				__PBXFileRef_build /* build */,
-				__PBXFileRef_docs /* docs */,
-				"_______Tests_" /* Tests */,
-				"____Products_" /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		"____Products_" /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				TestProducts_ /* Tests */,
-				"_____Product_ValidatedExtension" /* ValidatedExtension.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		"_____Configs_" /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig /* ValidatedExtension.xcodeproj/Configs/Project.xcconfig */,
-			);
-			name = Configs;
-			sourceTree = "<group>";
-		};
-		"_____Sources_" /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				"_______Group_ValidatedExtension" /* ValidatedExtension */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		"_______Group_ValidatedExtension" /* ValidatedExtension */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift /* ValidatedExtension.swift */,
-				__PBXFileRef_ValidatedExtension_Info.plist /* ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist */,
-			);
-			name = ValidatedExtension;
-			path = Sources/ValidatedExtension;
-			sourceTree = "<group>";
-		};
-		"_______Group_ValidatedExtensionTestSuite" /* ValidatedExtensionTestSuite */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Tests/ValidatedExtension/CustomTypeExample.swift /* CustomTypeExample.swift */,
-				__PBXFileRef_Tests/ValidatedExtension/ExampleValidators.swift /* ExampleValidators.swift */,
-				__PBXFileRef_Tests/ValidatedExtension/ValidatedTests.swift /* ValidatedTests.swift */,
-				__PBXFileRef_ValidatedExtensionTestSuite_Info.plist /* ValidatedExtension.xcodeproj/ValidatedExtensionTestSuite_Info.plist */,
-			);
-			name = ValidatedExtensionTestSuite;
-			path = Tests/ValidatedExtension;
-			sourceTree = "<group>";
-		};
-		"_______Tests_" /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				"_______Group_ValidatedExtensionTestSuite" /* ValidatedExtensionTestSuite */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		"______Target_ValidatedExtension" /* ValidatedExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_ValidatedExtension" /* Build configuration list for PBXNativeTarget "ValidatedExtension" */;
-			buildPhases = (
-				CompilePhase_ValidatedExtension /* Sources */,
-				"___LinkPhase_ValidatedExtension" /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ValidatedExtension;
-			productName = ValidatedExtension;
-			productReference = "_____Product_ValidatedExtension" /* ValidatedExtension.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"______Target_ValidatedExtensionTestSuite" /* ValidatedExtensionTestSuite */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_ValidatedExtensionTestSuite" /* Build configuration list for PBXNativeTarget "ValidatedExtensionTestSuite" */;
-			buildPhases = (
-				CompilePhase_ValidatedExtensionTestSuite /* Sources */,
-				"___LinkPhase_ValidatedExtensionTestSuite" /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				__Dependency_ValidatedExtension /* PBXTargetDependency */,
-			);
-			name = ValidatedExtensionTestSuite;
-			productName = ValidatedExtensionTestSuite;
-			productReference = "_____Product_ValidatedExtensionTestSuite" /* RelativePath(_impl: Basic.(PathImpl in _F37600050464D58680C1E5753557C388)(string: "ValidatedExtensionTestSuite.xctest")) */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		__RootObject_ /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 9999;
-			};
-			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "ValidatedExtension" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = "___RootGroup_";
-			productRefGroup = "____Products_" /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				"______Target_ValidatedExtension" /* ValidatedExtension */,
-				"______Target_ValidatedExtensionTestSuite" /* ValidatedExtensionTestSuite */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		CompilePhase_ValidatedExtension /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				__src_cc_ref_Sources/ValidatedExtension/ValidatedExtension.swift /* ValidatedExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CompilePhase_ValidatedExtensionTestSuite /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				__src_cc_ref_Tests/ValidatedExtension/CustomTypeExample.swift /* CustomTypeExample.swift in Sources */,
-				__src_cc_ref_Tests/ValidatedExtension/ExampleValidators.swift /* ExampleValidators.swift in Sources */,
-				__src_cc_ref_Tests/ValidatedExtension/ValidatedTests.swift /* ValidatedTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		__Dependency_ValidatedExtension /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "______Target_ValidatedExtension" /* ValidatedExtension */;
-			targetProxy = BAA2283B1D539DFA0034B8DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		_ReleaseConf_ValidatedExtension /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ValidatedExtension;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		_ReleaseConf_ValidatedExtensionTestSuite /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = ValidatedExtension.xcodeproj/ValidatedExtensionTestSuite_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		"___DebugConf_ValidatedExtension" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ValidatedExtension;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		"___DebugConf_ValidatedExtensionTestSuite" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = ValidatedExtension.xcodeproj/ValidatedExtensionTestSuite_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		"_____Release_" /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig /* ValidatedExtension.xcodeproj/Configs/Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		"_______Debug_" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig /* ValidatedExtension.xcodeproj/Configs/Project.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		"___RootConfs_" /* Build configuration list for PBXProject "ValidatedExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"_______Debug_" /* Debug */,
-				"_____Release_" /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		"_______Confs_ValidatedExtension" /* Build configuration list for PBXNativeTarget "ValidatedExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"___DebugConf_ValidatedExtension" /* Debug */,
-				_ReleaseConf_ValidatedExtension /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		"_______Confs_ValidatedExtensionTestSuite" /* Build configuration list for PBXNativeTarget "ValidatedExtensionTestSuite" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"___DebugConf_ValidatedExtensionTestSuite" /* Debug */,
-				_ReleaseConf_ValidatedExtensionTestSuite /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = __RootObject_ /* Project object */;
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_ValidatedExtension, ______Target_ValidatedExtensionTests);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_build' = {
+            isa = PBXFileReference;
+            lastKnownFileType = folder;
+            name = 'build';
+            path = 'build';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_docs' = {
+            isa = PBXFileReference;
+            lastKnownFileType = folder;
+            name = 'docs';
+            path = 'docs';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, '__PBXFileRef_build','__PBXFileRef_docs', Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        _______Group_ValidatedExtension = {
+            isa = PBXGroup;
+            name = 'ValidatedExtension';
+            path = 'Sources/ValidatedExtension';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift');
+        };
+        '__PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'ValidatedExtension.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_ValidatedExtension = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_ValidatedExtension;
+            buildPhases = (CompilePhase_ValidatedExtension, ___LinkPhase_ValidatedExtension);
+            buildRules = ();
+            dependencies = ();
+            name = 'ValidatedExtension';
+            productName = ValidatedExtension;
+            productReference = _____Product_ValidatedExtension;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_ValidatedExtension = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'ValidatedExtension.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_ValidatedExtension = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/ValidatedExtension/ValidatedExtension.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/ValidatedExtension/ValidatedExtension.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/ValidatedExtension/ValidatedExtension.swift';
+        };
+        ___LinkPhase_ValidatedExtension = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_ValidatedExtension = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_ValidatedExtension, _ReleaseConf_ValidatedExtension);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_ValidatedExtension = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'ValidatedExtension'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_ValidatedExtension = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'ValidatedExtension.xcodeproj/ValidatedExtension_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'ValidatedExtension'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_ValidatedExtension = {
+            isa = PBXTargetDependency;
+            target = ______Target_ValidatedExtension;
+        };
+        _______Group_ValidatedExtensionTests = {
+            isa = PBXGroup;
+            name = 'ValidatedExtensionTests';
+            path = 'Tests/ValidatedExtensionTests';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Tests/ValidatedExtensionTests/CustomTypeExample.swift', '__PBXFileRef_Tests/ValidatedExtensionTests/ExampleValidators.swift', '__PBXFileRef_Tests/ValidatedExtensionTests/ValidatedTests.swift');
+        };
+        '__PBXFileRef_Tests/ValidatedExtensionTests/CustomTypeExample.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'CustomTypeExample.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ValidatedExtensionTests/ExampleValidators.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'ExampleValidators.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ValidatedExtensionTests/ValidatedTests.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'ValidatedTests.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_ValidatedExtensionTests = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_ValidatedExtensionTests;
+            buildPhases = (CompilePhase_ValidatedExtensionTests, ___LinkPhase_ValidatedExtensionTests);
+            buildRules = ();
+            dependencies = (__Dependency_ValidatedExtension);
+            name = 'ValidatedExtensionTests';
+            productName = ValidatedExtensionTests;
+            productReference = _____Product_ValidatedExtensionTests;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_ValidatedExtensionTests = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'ValidatedExtensionTests.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_ValidatedExtensionTests = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Tests/ValidatedExtensionTests/CustomTypeExample.swift', '__src_cc_ref_Tests/ValidatedExtensionTests/ExampleValidators.swift', '__src_cc_ref_Tests/ValidatedExtensionTests/ValidatedTests.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Tests/ValidatedExtensionTests/CustomTypeExample.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ValidatedExtensionTests/CustomTypeExample.swift';
+        };
+        '__src_cc_ref_Tests/ValidatedExtensionTests/ExampleValidators.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ValidatedExtensionTests/ExampleValidators.swift';
+        };
+        '__src_cc_ref_Tests/ValidatedExtensionTests/ValidatedTests.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ValidatedExtensionTests/ValidatedTests.swift';
+        };
+        ___LinkPhase_ValidatedExtensionTests = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_ValidatedExtension_via_ValidatedExtensionTests);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_ValidatedExtension_via_ValidatedExtensionTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_ValidatedExtension;
+        };
+        _______Confs_ValidatedExtensionTests = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_ValidatedExtensionTests, _ReleaseConf_ValidatedExtensionTests);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_ValidatedExtensionTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'ValidatedExtension.xcodeproj/ValidatedExtensionTests_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Debug;
+        };
+        _ReleaseConf_ValidatedExtensionTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'ValidatedExtension.xcodeproj/ValidatedExtensionTests_Info.plist'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Release;
+        };
+        __Dependency_ValidatedExtensionTests = {
+            isa = PBXTargetDependency;
+            target = ______Target_ValidatedExtensionTests;
+        };
+        '__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            path = 'ValidatedExtension.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_ValidatedExtension);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        _______Tests_ = {
+            isa = PBXGroup;
+            children = (_______Group_ValidatedExtensionTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+       TestProducts_ = {
+            isa = PBXGroup;
+            children = (_____Product_ValidatedExtensionTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (TestProducts_, _____Product_ValidatedExtension);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_ValidatedExtension.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
 }
