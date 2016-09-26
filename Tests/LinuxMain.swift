@@ -1,5 +1,5 @@
 import XCTest
-@testable import EasyInject
+@testable import ValidatedExtension
 import ValidatedExtensionTests
 
 var tests = [XCTestCaseEntry]()

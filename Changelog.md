@@ -1,9 +1,12 @@
 # 4.0.0
 *Released: 2016-09-26*
 
-**Breaking Changes:**
+### Breaking Changes
 
 - Dropped Swift 2.x support - @vknabel
+
+### Other Changes
+
 - Added Travis support - @vknabel
 - Added missing `Tests` suffix for `Tests/ValidatedExtension` - @vknabel
 - Added support for `$ swift test` on Linux
