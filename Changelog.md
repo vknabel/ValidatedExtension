@@ -6,6 +6,7 @@
 - Dropped Swift 2.x support - @vknabel
 - Added Travis support - @vknabel
 - Added missing `Tests` suffix for `Tests/ValidatedExtension` - @vknabel
+- Added support for `$ swift test` on Linux
 
 # 3.0.1
 *Released: 16/08/2016*

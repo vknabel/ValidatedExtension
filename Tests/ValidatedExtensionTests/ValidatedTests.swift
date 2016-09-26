@@ -5,7 +5,22 @@ import ValidatedExtension
  The following tests use multiple example validators to ensure that invalid values
  cannot be constructed, while valid ones can be.
 */
-class ValidatedTests: XCTestCase {
+class ValidatedTests: XCTestCase, LinuxTestCase {
+
+    static var allTests = [
+        ("testValidatesEmptyString", testValidatesEmptyString),
+        ("testValidatesAnyEmptyCollection", testValidatesAnyEmptyCollection),
+        ("testSumLarger20", testSumLarger20),
+        ("testValidatesCountGreater10", testValidatesCountGreater10),
+        ("testValidatesLoggedInUser", testValidatesLoggedInUser),
+        ("testValidatesEmptyStringAndAllCaps1", testValidatesEmptyStringAndAllCaps1),
+        ("testValidatesCountGreater10AndSumLarger20", testValidatesCountGreater10AndSumLarger20),
+        ("testValidatesEmptyStringAndAllCapsContainsYorZ", testValidatesEmptyStringAndAllCapsContainsYorZ),
+        ("testValidatesEmptyStringAndAllCaps2", testValidatesEmptyStringAndAllCaps2),
+        ("testValidatesEmptyStringOrAllCaps", testValidatesEmptyStringOrAllCaps),
+        ("testValidatesNonEmpty", testValidatesNonEmpty),
+        ("testThrowingInitializer", testThrowingInitializer)
+    ]
 
     // MARK: Basic Validate Tests
 

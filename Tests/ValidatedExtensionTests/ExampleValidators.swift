@@ -8,10 +8,6 @@
 
 @testable import ValidatedExtension
 
-#if !swift(>=3.0)
-typealias Collection = CollectionType
-#endif
-
 // Example validators that are used throughout the unit tests.
 // These should also be a good starting point for your custom `Validator` types.
 
@@ -51,10 +47,6 @@ struct CountGreater10Validator<T: Collection>: Validator {
 
 struct SumLarger20Validator: Validator {
     static func validate(_ value: [Int]) throws -> Bool {
-        #if swift(>=3.0)
         return value.reduce(0, +) > 20
-        #else
-        return value.reduce(0, combine: +) > 20
-        #endif
     }
 }

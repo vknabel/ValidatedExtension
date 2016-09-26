@@ -16,13 +16,7 @@ struct User {
 }
 
 struct LoggedInValidator: Validator {
-    #if swift(>=3.0)
     static func validate(_ value: User) throws -> Bool {
         return value.loggedIn
     }
-    #else
-    static func validate(value: User) throws -> Bool {
-        return value.loggedIn
-    }
-    #endif
 }
