@@ -1,5 +1,5 @@
 # 4.0.0
-*Released: 2016-09-14*
+*Released: 2016-09-26*
 
 **Breaking Changes:**
 
