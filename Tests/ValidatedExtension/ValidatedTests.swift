@@ -193,7 +193,7 @@ class ValidatedTests: XCTestCase {
             XCTAssertTrue(error.validator == Not<EmptyStringValidator>.self)
             guard let wrapperValue = error.wrapperValue as? String else {
                 return XCTFail("Expected error.wrapperValue of type <String> "
-                    + "received <\(error.wrapperValue.dynamicType)> \(error.wrapperValue)")
+                    + "received <\(type(of: error.wrapperValue))> \(error.wrapperValue)")
             }
             XCTAssertTrue(wrapperValue == "")
             XCTAssertEqual(

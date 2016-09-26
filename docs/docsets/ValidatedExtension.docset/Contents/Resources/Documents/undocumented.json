@@ -1,1 +1,6 @@
-{"warnings":[{"file":"/Users/vknabel/Developer/vknabel/ValidatedExtension/Sources/ValidatedExtension/ValidatedExtension.swift","line":36,"symbol":"description","symbol_kind":"source.lang.swift.decl.var.instance","warning":"undocumented"},{"file":"/Users/vknabel/Developer/vknabel/ValidatedExtension/Sources/ValidatedExtension/ValidatedExtension.swift","line":120,"symbol":"validate(_:)","symbol_kind":"source.lang.swift.decl.function.method.static","warning":"undocumented"},{"file":"/Users/vknabel/Developer/vknabel/ValidatedExtension/Sources/ValidatedExtension/ValidatedExtension.swift","line":150,"symbol":"validate(_:)","symbol_kind":"source.lang.swift.decl.function.method.static","warning":"undocumented"},{"file":"/Users/vknabel/Developer/vknabel/ValidatedExtension/Sources/ValidatedExtension/ValidatedExtension.swift","line":163,"symbol":"validate(_:)","symbol_kind":"source.lang.swift.decl.function.method.static","warning":"undocumented"}],"source_directory":"/Users/vknabel/Developer/vknabel/ValidatedExtension"}
+{
+  "warnings": [
+
+  ],
+  "source_directory": "/Users/vknabel/Developer/vknabel/ValidatedExtension"
+}

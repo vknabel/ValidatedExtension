@@ -1,3 +1,10 @@
+# 4.0.0
+*Released: 2016-09-14*
+
+**Breaking Changes:**
+
+- Dropped Swift 2.x support - @vknabel
+
 # 3.0.1
 *Released: 16/08/2016*
 

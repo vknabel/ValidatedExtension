@@ -20,10 +20,6 @@ public protocol Validator {
     static func validate(_ value: WrappedType) throws -> Bool
 }
 
-#if !swift(>=3.0)
-typealias Error = ErrorType
-#endif
-
 /// Error that is thrown when a validation fails. Proivdes the validator type and
 /// the value that failed validation
 public struct ValidatorError: Error, CustomStringConvertible {
@@ -34,11 +30,7 @@ public struct ValidatorError: Error, CustomStringConvertible {
     public let validator: Any.Type
 
     public var description: String {
-        #if swift(>=3.0)
         let type = type(of: wrapperValue)
-        #else
-        let type = wrapperValue.dynamicType
-        #endif
         return "Value: '\(wrapperValue)' <\(type)>, "
             + "failed validation of Validator: \(validator.self)"
     }
@@ -100,7 +92,6 @@ public struct Validated<V: Validator>: ValidatedType {
     }
 }
 
-#if swift(>=3.0)
 /// Validator wrapper which is valid when `V1` and `V2` validated to `true`.
 public struct And<
     V1: Validator,
@@ -110,58 +101,21 @@ public struct And<
         return try V1.validate(value) && V2.validate(value)
     }
 }
-#else
-/// Validator wrapper which is valid when `V1` and `V2` validated to `true`.
-public struct And<
-    V1: Validator,
-    V2: Validator where
-        V1.WrappedType == V2.WrappedType>: Validator {
 
-    public static func validate(value: V1.WrappedType) throws -> Bool {
-        return try V1.validate(value) && V2.validate(value)
-    }
-}
-#endif
-
-#if swift(>=3.0)
 // swiftlint:disable:next type_name
 /// Validator wrapper which is valid when either `V1` or `V2` validated to `true`.
 public struct Or<
     V1: Validator,
     V2: Validator>: Validator where
     V1.WrappedType == V2.WrappedType {
-    #if swift(>=3.0)
     public static func validate(_ value: V1.WrappedType) throws -> Bool {
         return try V1.validate(value) || V2.validate(value)
     }
-    #else
-    public static func validate(value: V1.WrappedType) throws -> Bool {
-        return try V1.validate(value) || V2.validate(value)
-    }
-    #endif
 }
-#else
-// swiftlint:disable:next type_name
-/// Validator wrapper which is valid when either `V1` or `V2` validated to `true`.
-public struct Or<
-    V1: Validator,
-    V2: Validator where
-V1.WrappedType == V2.WrappedType>: Validator {
-    public static func validate(value: V1.WrappedType) throws -> Bool {
-        return try V1.validate(value) || V2.validate(value)
-    }
-}
-#endif
 
 /// Validator wrapper which is valid when `V1` validated to `false`.
 public struct Not<V1: Validator>: Validator {
-    #if swift(>=3.0)
     public static func validate(_ value: V1.WrappedType) throws -> Bool {
         return try !V1.validate(value)
     }
-    #else
-    public static func validate(value: V1.WrappedType) throws -> Bool {
-        return try !V1.validate(value)
-    }
-    #endif
 }

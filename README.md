@@ -128,12 +128,14 @@ Validated is available via the usual suspects.
 
 You can install Validated via CocoaPods by adding it to your `Podfile`:
 
-	use_frameworks!
+```ruby
+use_frameworks!
 
-	source 'https://github.com/CocoaPods/Specs.git'
-	platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 
-	pod 'ValidatedExtension'
+pod 'ValidatedExtension'
+```
 
 And run `pod install`.
 
@@ -141,8 +143,9 @@ And run `pod install`.
 
 You can install ValidatedExtension via Carthage by adding the following line to your Cartfile:
 
-    github "vknabel/ValidatedExtension"
-
+```ruby
+github "vknabel/ValidatedExtension"
+```
 
 # Get in touch
 
